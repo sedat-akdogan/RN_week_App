@@ -6,21 +6,17 @@ import { Button, View, Text, StyleSheet } from 'react-native';
 const Home = () => {
   const navigation = useNavigation();
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={styles.container}>
       <Text style={{ fontSize: 20 }}>
         Welcome to Home Screen!
       </Text>
       <Button
-        title="Go to List"
-        onPress={() => navigation.navigate("List")}
-      />
-      <Button
-        title='Go to Detail'
+        title='Go to Details'
         onPress={() => navigation.navigate('Detail')}
       />
       <Button
-        title='Go to Record'
-        onPress={() => navigation.navigate('Record')}
+        title='Go to MyList'
+        onPress={() => navigation.navigate('MyList')}
       />
     </View>
   );

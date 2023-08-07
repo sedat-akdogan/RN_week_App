@@ -9,6 +9,7 @@ import {
   StatusBar,
   Button
 } from 'react-native';
+import MyModal from './MyModal';
 
 const DATA = [
   {
@@ -40,6 +41,7 @@ const MyList = () => {
         renderItem={({item}) => <Item title={item.title} />}
         keyExtractor={item => item.id}
       />
+      <MyModal />
       <Button
         title="Go back to Home"
         onPress={() => navigation.navigate('Home')}

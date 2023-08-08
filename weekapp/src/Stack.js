@@ -6,6 +6,7 @@ import Home from './Home';
 import Detail from './Detail';
 import MyList from './MyList';
 import MyState from './MyState';
+import MyButton from './Button';
 // import Record from './Record';
 
 const Stack = createStackNavigator();
@@ -33,6 +34,11 @@ const MyStack = () => {
           name="MyState"
           component={MyState}
           options={{ title: 'MyState' }}
+        />
+          <Stack.Screen
+          name="MyButton"
+          component={MyButton}
+          options={{ title: 'MyButton' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

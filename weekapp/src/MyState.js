@@ -23,26 +23,24 @@ const Parent = () => {
 const styles = StyleSheet.create({
     view1: {
         flex: 1,
-        // alignItems: 'center', 
+        alignItems: 'center', 
         backgroundColor: 'pink', 
-        // margin: 20, 
-        // padding: 20
+        margin: 20, 
+        padding: 20
     },
     view1a: {
-        flex: 1,
-        // width: 100, 
-        // height: 100,
+        width: 100, 
+        height: 100,
         backgroundColor: 'powderblue',
     },
     view1b: {
-        flex: 2,
-        // width: 200, 
-        // height: 200,
+        width: 200, 
+        height: 200,
         backgroundColor: 'skyblue',
     },
     view1c: { 
-        flex: 3,
-        // height: 300,
+
+        height: 300,
         backgroundColor: 'steelblue',
     },
 });

@@ -8,7 +8,7 @@ const Home = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 20 }}>
+      <Text style={{ fontSize: 20, color: 'red', marginBottom: 20 }}>
         Welcome to Home Screen!
       </Text>
       <Button
@@ -22,6 +22,10 @@ const Home = () => {
       <Button
         title='Go to MyState'
         onPress={() => navigation.navigate('MyState')}
+      />
+      <Button
+        title='Go to MyButton'
+        onPress={() => navigation.navigate('MyButton')}
       />
     </View>
   );

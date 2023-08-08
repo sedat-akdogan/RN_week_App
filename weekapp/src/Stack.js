@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './Home';
 import Detail from './Detail';
 import MyList from './MyList';
+import MyState from './MyState';
 // import Record from './Record';
 
 const Stack = createStackNavigator();
@@ -27,6 +28,11 @@ const MyStack = () => {
           name="MyList"
           component={MyList}
           options={{ title: 'MyList' }}
+        />
+         <Stack.Screen
+          name="MyState"
+          component={MyState}
+          options={{ title: 'MyState' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

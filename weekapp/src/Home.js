@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Button, View, Text, StyleSheet } from 'react-native';
-import MyState from './MyState';
+
 
 
 const Home = () => {
@@ -15,10 +15,13 @@ const Home = () => {
         title='Go to Details'
         onPress={() => navigation.navigate('Detail')}
       />
-      <MyState />
       <Button
         title='Go to MyList'
         onPress={() => navigation.navigate('MyList')}
+      />
+      <Button
+        title='Go to MyState'
+        onPress={() => navigation.navigate('MyState')}
       />
     </View>
   );

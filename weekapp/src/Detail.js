@@ -1,25 +1,31 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { View, Text, Button, TextInput, StyleSheet } from 'react-native';
-import 'react-native-get-random-values'
-import {WebView} from 'react-native-webview';
-import {v4 as uuidv4} from 'uuid';
+// import {v4 as uuidv4} from 'uuid';
+import uuid from 'react-native-uuid';
+
 
 const Detail = () => {
   const navigation = useNavigation();
-  const [text, setText] = useState('');
+  const [myInput, setMyInput] = useState('State');
+
+  const handleChange = (text) => {
+    setMyInput(text);
+  }
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>This is the details page</Text>
       <View style={{ padding: 10 }}>
+        <Text>{myInput}</Text>
         <TextInput
           style={{ height: 40 }}
           placeholder='type your items'
-          onChangeText={newText => setText(newText)}
-          defaultValue='text'
+          onChangeText={newText => handleChange(newText)}
+          
         />
       </View>
-      <TextInputExample />
+
+      <TextInputExample handleChange_prop={handleChange}/>
       <Button
         title="Go back to Home"
         onPress={() => navigation.navigate('Home')}
@@ -29,10 +35,9 @@ const Detail = () => {
 };
 
 
-const TextInputExample = () => {
-
+const TextInputExample = ({handleChange_prop}) => {
   const [item, setItem] = useState({
-    id: uuidv4(),
+    id: uuid.v4(),
     model: undefined,
     year: undefined,
     make: undefined,
@@ -43,6 +48,11 @@ const TextInputExample = () => {
     desc: undefined,
   });
 
+  const handleSubmit = (input) => {
+    setMyInput(input);
+
+  }
+
   const handleInputChange = (field, value) => {
     setItem(prevState => ({ ...prevState, [field]: value }));
   };
@@ -51,13 +61,17 @@ const TextInputExample = () => {
     <View style={styles.container}>
       <Text>Enter your text:</Text>
       <View style={styles.inputGroup}>
-        <Text style={styles.inputLabel}>Model</Text>
+        <Text style={styles.inputLabel}>this is the text</Text>
         <TextInput
           placeholder="Model"
           style={styles.textInputBottomBordered}
-          onChangeText={value => handleInputChange('model', value)}
+          onChangeText={value => handleChange_prop(value)}
         />
       </View>
+      <Button 
+       title="Add new list items: "
+       onPress={(input) => handleSubmit(input) }
+      />
     </View>
   );
 };

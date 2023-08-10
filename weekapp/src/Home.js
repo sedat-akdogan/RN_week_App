@@ -27,6 +27,14 @@ const Home = () => {
         title='Go to MyButton'
         onPress={() => navigation.navigate('MyButton')}
       />
+      <Button
+        title='Go to Flex'
+        onPress={() => navigation.navigate('Flex')}
+      />
+      <Button
+        title='Go to Activity'
+        onPress={() => navigation.navigate('Activity')}
+      />
     </View>
   );
 };

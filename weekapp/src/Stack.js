@@ -7,7 +7,8 @@ import Detail from './Detail';
 import MyList from './MyList';
 import MyState from './MyState';
 import MyButton from './Button';
-// import Record from './Record';
+import Flex from './Flex';
+import Activity from './Activity';
 
 const Stack = createStackNavigator();
 
@@ -30,15 +31,25 @@ const MyStack = () => {
           component={MyList}
           options={{ title: 'MyList' }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="MyState"
           component={MyState}
           options={{ title: 'MyState' }}
         />
-          <Stack.Screen
+        <Stack.Screen
           name="MyButton"
           component={MyButton}
           options={{ title: 'MyButton' }}
+        />
+        <Stack.Screen
+          name="Flex"
+          component={Flex}
+          options={{ title: 'Flex' }}
+        />
+        <Stack.Screen
+          name="Activity"
+          component={Activity}
+          options={{ title: 'Activity' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

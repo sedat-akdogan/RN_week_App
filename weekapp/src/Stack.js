@@ -9,6 +9,7 @@ import MyState from './MyState';
 import MyButton from './Button';
 import Flex from './Flex';
 import Activity from './Activity';
+import Functions from './Functions';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +52,10 @@ const MyStack = () => {
           component={Activity}
           options={{ title: 'Activity' }}
         />
+        <Stack.Screen
+        name="Functions"
+        component={Functions}
+        options={{ title: 'Functions' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

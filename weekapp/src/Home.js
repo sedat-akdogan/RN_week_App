@@ -35,6 +35,10 @@ const Home = () => {
         title='Go to Activity'
         onPress={() => navigation.navigate('Activity')}
       />
+      <Button
+        title='Go to Functions'
+        onPress={() => navigation.navigate('Functions')}
+      />
     </View>
   );
 };

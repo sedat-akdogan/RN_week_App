@@ -1,15 +1,39 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TextInput, Button, Alert } from 'react-native';
+
+
+function MyForm() {
+    const [name, setName] = useState('');
+    const handleSubmit = () => {
+        if (name !== "") 
+        Alert.alert(`The Name you entered was: ${name}`);
+        setName('');
+    }
+    return (
+        <View>
+            <Text>Enter your name: </Text>
+            <TextInput
+                style={styles.textCar}
+                type="text"
+                value={name}
+                onChangeText={(text) => setName(text)}
+            />
+            <Button 
+            title="Submit"
+            onPress={handleSubmit} />
+        </View>
+    );
+}
 
 function MissedGoal() {
     return (
-    <Text>Missed!!!</Text>
+        <Text>Missed!!!</Text>
     );
 }
 
 function MadeGoal() {
     return (
-    <Text>Goal! Goal! Goal!</Text>
+        <Text style={{ margin: 20 }}>Goal! Goal! Goal!</Text>
     );
 }
 
@@ -35,7 +59,8 @@ const Functions = () => {
         <View style={styles.container}>
             <Text style={styles.text}>What I have in my garage?</Text>
             <Car brand={carName} />
-            <Goal isGoal={true}/>
+            <Goal isGoal={true} />
+            <MyForm />
         </View>
     );
 };

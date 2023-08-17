@@ -39,14 +39,22 @@ const Home = () => {
         title='Go to Functions'
         onPress={() => navigation.navigate('Functions')}
       />
+      <Button
+        title='Go to UseRef'
+        onPress={() => navigation.navigate('UseRef')}
+      />
+      <Button
+        title='Go to Stopwatch'
+        onPress={() => navigation.navigate('Stopwatch')}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    justifyContent: 'center', 
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center'
   }
 });

@@ -10,6 +10,8 @@ import MyButton from './Button';
 import Flex from './Flex';
 import Activity from './Activity';
 import Functions from './Functions';
+import UseRef from './UseRef';
+import Stopwatch from './Stopwatch';
 
 const Stack = createStackNavigator();
 
@@ -55,7 +57,18 @@ const MyStack = () => {
         <Stack.Screen
         name="Functions"
         component={Functions}
-        options={{ title: 'Functions' }} />
+        options={{ title: 'Functions' }} 
+        />
+        <Stack.Screen
+        name="UseRef"
+        component={UseRef}
+        options={{ title: 'UseRef'}} 
+        />
+         <Stack.Screen
+        name="Stopwatch"
+        component={Stopwatch}
+        options={{ title: 'Stopwatch'}} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
